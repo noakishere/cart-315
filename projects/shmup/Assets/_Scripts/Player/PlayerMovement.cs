@@ -4,19 +4,23 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private float movementSpeed;
-
+    // Game object components
     private Rigidbody2D rb;
 
+    [Header("General movement stuff")]
+    [SerializeField] private float movementSpeed;
+    [SerializeField] private float movementSpeedModifier;
+
+    [SerializeField] private bool canMove;
+
+    // tracks input for movement
     private Vector2 movement;
 
-    // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
@@ -26,11 +30,18 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.MovePosition(rb.position + movement * movementSpeed * Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + movement * (movementSpeed + movementSpeedModifier) * Time.fixedDeltaTime);
     }
 
-    private void InputControl()
-    {
 
+    // Setters
+    public void SetModifier(float modifierValue)
+    {
+        movementSpeedModifier += modifierValue;
+    }
+
+    public void SetMoveRules(bool canMove)
+    {
+        this.canMove = canMove;
     }
 }
