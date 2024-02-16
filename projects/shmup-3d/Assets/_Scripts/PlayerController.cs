@@ -15,9 +15,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform groundCheck; // A point at the character's feet to check for ground
     [SerializeField] private float groundCheckRadius = 0.5f; // Radius of the ground check
 
+
     private Vector3 movementInput;
 
     Rigidbody rb;
+    private float horizontalMovementInput;
+    private float verticalMovementInput;
+    private float horizontalRotationInput;
 
     // Start is called before the first frame update
     void Start()
@@ -28,11 +32,11 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float horizontal = Input.GetAxis("Horizontal");
+        horizontalRotationInput = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
         //float jumpDir = Input.GetAxis("Jump");
         
-        movementInput = new Vector3(horizontal, 0, vertical).normalized;
+        movementInput = new Vector3(0, 0, vertical).normalized;
 
 
         float jumpAxis = Input.GetAxis("Jump");
@@ -42,6 +46,8 @@ public class PlayerController : MonoBehaviour
         {
             jumpRequested = true;
         }
+
+        //horizontalRotationInput = Input.GetAxis("Mouse X");
     }
 
     private void FixedUpdate()
@@ -50,7 +56,7 @@ public class PlayerController : MonoBehaviour
         Vector3 newPos = rb.position + rb.transform.TransformDirection(movement);
         rb.MovePosition(newPos);
 
-        //if(movement != Vector3.zero)
+        //if (movement != Vector3.zero)
         //{
         //    Quaternion toRotation = Quaternion.LookRotation(movement, Vector3.up);
         //    rb.rotation = Quaternion.RotateTowards(rb.rotation, toRotation, rotationSpeed * Time.fixedDeltaTime);
@@ -61,5 +67,12 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             jumpRequested = false;
         }
+
+        // Calculate rotation amount
+        float rotationAmount = horizontalRotationInput * rotationSpeed * Time.fixedDeltaTime;
+
+        // Apply rotation to the Rigidbody
+        Quaternion deltaRotation = Quaternion.Euler(new Vector3(0, rotationAmount, 0));
+        rb.MoveRotation(rb.rotation * deltaRotation);
     }
 }
