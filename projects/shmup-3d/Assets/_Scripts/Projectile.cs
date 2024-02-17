@@ -10,9 +10,15 @@ public class Projectile : MonoBehaviour
 
     Rigidbody rb;
 
+    [SerializeField] private Transform parentGun;
+
     void Start()
     {
-        rb = transform.GetChild(0).gameObject.GetComponent<Rigidbody>();
+        rb = transform.gameObject.GetComponent<Rigidbody>();
+
+        Debug.Log("HELLO");
+        parentGun = transform.parent.parent;
+
 
         Destroy(gameObject, deathTimer);
     }
@@ -25,11 +31,11 @@ public class Projectile : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.AddForce(transform.up * shootingForce, ForceMode.Impulse);
+        rb.AddForce(parentGun.forward * shootingForce, ForceMode.Impulse);
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        Destroy(gameObject);
+        Destroy(gameObject.transform.parent.gameObject);
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerShoot : MonoBehaviour
 {
     [SerializeField] private GameObject projectile;
+    [SerializeField] private Transform gunTransform;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +18,8 @@ public class PlayerShoot : MonoBehaviour
     {
         if(Input.GetButtonDown("Fire1"))
         {
-            Instantiate(projectile, transform.position, Quaternion.identity);
+            var newProjectile = Instantiate(projectile, gunTransform.position, Quaternion.identity);
+            newProjectile.transform.parent = gunTransform;
         }
     }
 

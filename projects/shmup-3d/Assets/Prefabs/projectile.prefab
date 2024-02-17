@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 992605953542381167}
-  - component: {fileID: 919132148956658259}
   m_Layer: 0
   m_Name: projectile
   m_TagString: Untagged
@@ -24,29 +23,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 472211070906565845}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0, y: 0.139, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 670055946884966047}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!114 &919132148956658259
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 472211070906565845}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d52be6e29aa864545914837013675559, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deathTimer: 4
-  shootingForce: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3692833247673113299
 GameObject:
   m_ObjectHideFlags: 0
@@ -60,6 +45,7 @@ GameObject:
   - component: {fileID: 957121930280166933}
   - component: {fileID: 742188655785392514}
   - component: {fileID: 742188655785392513}
+  - component: {fileID: 1864913274088424606}
   m_Layer: 0
   m_Name: projectile
   m_TagString: Untagged
@@ -161,3 +147,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1864913274088424606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3692833247673113299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d52be6e29aa864545914837013675559, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathTimer: 4
+  shootingForce: 5
+  parentGun: {fileID: 0}

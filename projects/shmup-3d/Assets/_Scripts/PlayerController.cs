@@ -32,11 +32,18 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        horizontalRotationInput = Input.GetAxis("Horizontal");
+        float horizontal = Input.GetAxis("Horizontal");
+
+        horizontalRotationInput = Input.GetAxis("Mouse X");
+        float joystickInput = Input.GetAxis("RightJoystickHorizontal");
+        joystickInput = ApplyDeadZone(joystickInput, 0.1f);
+
+        horizontalRotationInput += joystickInput;
+
         float vertical = Input.GetAxis("Vertical");
         //float jumpDir = Input.GetAxis("Jump");
         
-        movementInput = new Vector3(0, 0, vertical).normalized;
+        movementInput = new Vector3(horizontal, 0, vertical).normalized;
 
 
         float jumpAxis = Input.GetAxis("Jump");
@@ -74,5 +81,19 @@ public class PlayerController : MonoBehaviour
         // Apply rotation to the Rigidbody
         Quaternion deltaRotation = Quaternion.Euler(new Vector3(0, rotationAmount, 0));
         rb.MoveRotation(rb.rotation * deltaRotation);
+    }
+
+
+    float ApplyDeadZone(float input, float deadZone)
+    {
+        if (Mathf.Abs(input) < deadZone)
+        {
+            return 0; // Input is within the dead zone, ignore it
+        }
+        else
+        {
+            // Input is outside the dead zone, optionally adjust to start at 0
+            return (Mathf.Abs(input) - deadZone) * Mathf.Sign(input) / (1 - deadZone);
+        }
     }
 }
