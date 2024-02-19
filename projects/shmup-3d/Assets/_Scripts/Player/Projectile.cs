@@ -16,11 +16,10 @@ public class Projectile : MonoBehaviour
     {
         rb = transform.gameObject.GetComponent<Rigidbody>();
 
-        Debug.Log("HELLO");
         parentGun = transform.parent.parent;
 
 
-        Destroy(gameObject, deathTimer);
+        Destroy(gameObject.transform.parent.gameObject, deathTimer);
     }
 
     // Update is called once per frame
@@ -37,5 +36,6 @@ public class Projectile : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         Destroy(gameObject.transform.parent.gameObject);
+        //Debug.Log("HELLO FROM PROJECTILE");
     }
 }
