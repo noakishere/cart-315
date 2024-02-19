@@ -9,6 +9,7 @@ public class DestroyablePart : MonoBehaviour
         //Debug.Log("HELLO");
         if(collision.gameObject.layer == 9)
         {
+            ScoreManager.Instance.UpdateScore(20);
             KillEnemy();
         }
     }

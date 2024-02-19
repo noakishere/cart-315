@@ -1,18 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
-public class ScoreManager : MonoBehaviour
+public class ScoreManager : SingletonMonoBehaviour<ScoreManager>
 {
+    [SerializeField] private int score;
+
+    [SerializeField] TextMeshProUGUI scoreText;
     // Start is called before the first frame update
     void Start()
     {
-        
+        scoreText.text = $"Score: {score}";
     }
 
-    // Update is called once per frame
-    void Update()
+    public void UpdateScore(int newScore)
     {
-        
+        score += newScore;
+        scoreText.text = $"Score: {score}";
     }
 }
