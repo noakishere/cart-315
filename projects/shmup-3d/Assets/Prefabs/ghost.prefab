@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4488753752228961940}
   - component: {fileID: 2152178480514200422}
   - component: {fileID: 6576627321230951618}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: arm-right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 1193344634489018947}
   - component: {fileID: 598521233107967030}
   - component: {fileID: 6148333296312527692}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ghost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -209,7 +209,7 @@ GameObject:
   - component: {fileID: 3421767270715188870}
   - component: {fileID: 7013064586645957907}
   - component: {fileID: 7119619672111867682}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: arm-left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -292,7 +292,7 @@ GameObject:
   - component: {fileID: 5531154493579507988}
   - component: {fileID: 7172149832038689972}
   - component: {fileID: 4477164706741586472}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: torso
   m_TagString: Untagged
   m_Icon: {fileID: 0}

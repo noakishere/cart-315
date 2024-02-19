@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8378554341673928389}
   - component: {fileID: 8875348559141593953}
   - component: {fileID: 1160916895073221827}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 7964350539197513852}
   - component: {fileID: 8527469796432410853}
   - component: {fileID: 948091064297035684}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: leg-right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 8100695303644332254}
   - component: {fileID: 6020245141205352153}
   - component: {fileID: 8422682696435051067}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: arm-right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 6235590115590528210}
   - component: {fileID: 3559052003249721760}
   - component: {fileID: 5049615927071003953}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: torso
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -343,7 +343,7 @@ GameObject:
   - component: {fileID: 3177686531613025339}
   - component: {fileID: 6149296964952585501}
   - component: {fileID: 9034396137460663956}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: arm-left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -426,7 +426,7 @@ GameObject:
   - component: {fileID: 4751101424646939915}
   - component: {fileID: 3635007406989578199}
   - component: {fileID: 5477526777469371177}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: leg-left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -511,7 +511,7 @@ GameObject:
   - component: {fileID: 2391110689548187343}
   - component: {fileID: 1257335087213695010}
   - component: {fileID: 204826333523091877}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: zombie
   m_TagString: Untagged
   m_Icon: {fileID: 0}

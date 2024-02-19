@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 4087d82d8f43b8745a155210e260d04e
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - bianzhidai
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 00652d05ff945734cac9cf55f37a31fd, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
