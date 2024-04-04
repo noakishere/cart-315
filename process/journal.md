@@ -56,4 +56,4 @@ We have also decided to have multiple weapon types that reflect on different cop
 
 ## Design Journal: Prototyping Stage 4
 
-Some programming was done for First person controller scripts of the game itself. Ready to implement the weapons and some level design for the final prototype next week. :P
+Some programming was done for First person controller scripts of the game itself. Ready to implement the weapons and some level design for the final prototype next week. :P no further reiterations on the design itself are done until we have something tangible to test in the next few days.
