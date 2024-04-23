@@ -8,6 +8,8 @@ public class SpawnManager : MonoBehaviour
 
     [SerializeField] private List<GameObject> enemies;
 
+    [SerializeField] private Transform player;
+
     [SerializeField] private float spawnTime;
     [SerializeField] private float variance;
 
