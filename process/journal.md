@@ -57,3 +57,11 @@ We have also decided to have multiple weapon types that reflect on different cop
 ## Design Journal: Prototyping Stage 4
 
 Some programming was done for First person controller scripts of the game itself. Ready to implement the weapons and some level design for the final prototype next week. :P no further reiterations on the design itself are done until we have something tangible to test in the next few days.
+
+## Original Game: Final Presentations
+
+After a few weeks of working on the game idea, and wrestling with Unity. We managed to have a dummy scene available in which the fps mechanics, as well as some basic stats and enemy mechanics are present.
+
+The biggest takeaway of this prototype was to definitely scope as much as possible. I believe the initial idea was way too big, and for the time that we had it was almost impossible to have a neat outcome. However, now we have a very basic foundation available for future iterations of the game which can be quite handy.
+
+Biggest challenge: staying away from FPS inspirations and trying newer mechanics.
